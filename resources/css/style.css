@@ -91,6 +91,8 @@ span{
 }
 
 
+
+
 /* "time record section" */
 .time {
   position:absolute;
@@ -112,5 +114,31 @@ color: inherit;
   }
   .cover1{
     height: 9rem;
+  }
+  .instructions{
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width:500px){
+  span{
+    font-size: 4rem;
+  }
+  .card{
+    height: 5rem;
+  }
+  .cover1{
+    height: 5rem;
+  }
+  .btn-info{
+
+    padding:0 0.1rem;
+  }
+  .restart{
+    position:absolute;
+    top: -35px;
+    right:12px;
+    font-weight: bold;
+    font-size: 1.1rem;
   }
 }

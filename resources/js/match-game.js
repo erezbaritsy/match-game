@@ -7,18 +7,18 @@ var $gFliiped = 0;
 var gGameCards = {}
 var gObjNames={};
 var gLastUser ='';
-var gTime = 45;
+var gTime = 0;
 var gCoupleFliiped = 8;
 var gIfStarted = false;
 var stopTime = 0 ;
 
 var saveInfo = {
-//start time record and print it on board.
+  //start time record and print it on board.
   timeRecord: function(){
     var starTime = new Date().getTime();
     var now = new Date().getTime();
     stopTime =  setInterval(function(){
-
+      console.log(gTime);
       now = new Date().getTime();
       gTime = Math.floor((now - starTime ) / 1000 );
       document.getElementById("seconds").innerHTML= gTime;
@@ -112,7 +112,7 @@ var MatchGame =  {
 
             setTimeout(function() {  //stop time recors and restart game
               clearInterval(stopTime);
-            saveInfo.getVlue(gLastUser);
+              saveInfo.getVlue(gLastUser);
               MatchGame.restart();
             }, 500);
 
@@ -125,6 +125,7 @@ var MatchGame =  {
   restart: function(){  // reset all game cards and values for restart the game
     MatchGame.createCards();
     MatchGame.renderCarsds();
+    clearInterval(stopTime);
     gCoupleFliiped=8;
     var gCount = 0 ;
     gIfStarted = false;
@@ -178,18 +179,18 @@ $(document).ready(function(){
   MatchGame.renderCarsds();
 
   $('.restart').click(function(){  // restart game when click on "restart" button
-    MatchGame.restart();
-  });
+  MatchGame.restart();
+});
 
-  $('.card').on('click',function(){  // start time recors only on first click and
-    //execute game functions for selected card
-    if(gIfStarted === false){
+$('.card').on('click',function(){  // start time recors only on first click and
+  //execute game functions for selected card
+  if(gIfStarted === false){
     saveInfo.timeRecord();
     gIfStarted = true;
-    }
-    obj = $(this);
-    MatchGame.gameTurn(obj);
-  });
+  }
+  obj = $(this);
+  MatchGame.gameTurn(obj);
+});
 
 });
 
