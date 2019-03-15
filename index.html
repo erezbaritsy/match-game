@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Match Game</title>
+  <link rel="stylesheet" href="resources/css/reset.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="resources/css/style.css" type="text/css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+  <!--font-family: 'Work Sans', sans-serif; -->
+</head>
+<body>
+
+  <div class="container top">
+    <div class="row">
+
+      <!--  instructions section  -->
+      <div class="instructions col-md-3 col-sm-12">
+        <h1>Match Game</h1>
+        <h3>Rules</h3>
+        <p>Click on a card to reveal the number on the other side. Click on a second card to try and find a match to the first. If you succeed, the pair will be removed from play. If not, try again!</p>
+        <h3>How To Win</h3>
+        <p>You win when all pairs have been found.</p>
+      </div>
+
+        <!--  main section of the game board -->
+      <div class="disable-select cardGame col-md-9 col-sm-12">
+
+          <!--  restart button  -->
+        <button type="button" class="restart btn btn-info">Restart</button>
+  <!--  presenting and render time  -->
+        <p class="time"> time: <span id="seconds">0</span> seconds </p>
+  <!--  cards divs (16 cards)   -->
+        <div class="row">
+
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+          <div class="card col-3">
+            <span></span>
+            <div class="cover1">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  js and jquery links  -->
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./resources/js/match-game.js"></script>
+  <script type="text/javascript" src="./resources/js/tests.js"></script>
+</body>
+</html>
