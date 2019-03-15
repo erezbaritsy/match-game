@@ -127,7 +127,7 @@ var MatchGame =  {
     MatchGame.renderCarsds();
     clearInterval(stopTime);
     gCoupleFliiped=8;
-    var gCount = 0 ;
+    gCount = 0 ;
     gIfStarted = false;
     document.getElementById("seconds").innerHTML= 0;
     $('.cardGame').find('.cover1').each(function(){
