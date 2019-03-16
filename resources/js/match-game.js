@@ -11,20 +11,17 @@ var gTime = 0;
 var gCoupleFliiped = 8;
 var gIfStarted = false;
 var stopTime = 0 ;
-
 var saveInfo = {
   //start time record and print it on board.
   timeRecord: function(){
     var starTime = new Date().getTime();
     var now = new Date().getTime();
     stopTime =  setInterval(function(){
-      console.log(gTime);
       now = new Date().getTime();
       gTime = Math.floor((now - starTime ) / 1000 );
       document.getElementById("seconds").innerHTML= gTime;
     },1000);
   },
-
   /*execute when win - check if there is a new record and send/get data
   to/from localStorage */
   getVlue: function(last){
@@ -49,7 +46,6 @@ var saveInfo = {
     names = JSON.stringify(names);
     localStorage.setItem('users',names);
   },
-
   //get input from user and initiate prop/values in locak storage
   onStart: function(){
     var checkLocal = localStorage.getItem('users');
@@ -73,12 +69,12 @@ var saveInfo = {
     }
   },
 }
-
 var MatchGame =  {
-
-
+  printBorad: function(){
+    for(var i=0;i<16;i++){
+ $("#board").append('<div class="card col-3"><span></span><div class="cover1"></div></div>');
+  }},
   gameTurn: function(obj){
-
     $gFliiped =$(obj).find('.cover1').css('display');
     // prevent more than 2 card to be fliiped and do prevent "clicking" when
     // card allready "fliiped"
@@ -109,13 +105,11 @@ var MatchGame =  {
           $gPrevious.parent().css({"background-color":"rgb(153, 153, 153)","color":"rgb(204, 204, 204)"});
           gCoupleFliiped--;
           if(gCoupleFliiped === 0 ){  //chek if all card are fliiped
-
             setTimeout(function() {  //stop time recors and restart game
               clearInterval(stopTime);
               saveInfo.getVlue(gLastUser);
               MatchGame.restart();
             }, 500);
-
           }
           gCount=0;
         }
@@ -172,16 +166,15 @@ var MatchGame =  {
   },
 }
 // Start the game when load the page
+
 MatchGame.createCards();
 saveInfo.onStart();
-
 $(document).ready(function(){
+  MatchGame.printBorad();
   MatchGame.renderCarsds();
-
   $('.restart').click(function(){  // restart game when click on "restart" button
   MatchGame.restart();
 });
-
 $('.card').on('click',function(){  // start time recors only on first click and
   //execute game functions for selected card
   if(gIfStarted === false){
@@ -191,7 +184,4 @@ $('.card').on('click',function(){  // start time recors only on first click and
   obj = $(this);
   MatchGame.gameTurn(obj);
 });
-
 });
-
-// end :-) //

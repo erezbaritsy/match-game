@@ -11,10 +11,8 @@
   <!--font-family: 'Work Sans', sans-serif; -->
 </head>
 <body>
-
   <div class="container top">
     <div class="row">
-
       <!--  instructions section  -->
       <div class="instructions col-md-3 col-sm-12">
         <h1>Match Game</h1>
@@ -23,119 +21,18 @@
         <h3>How To Win</h3>
         <p>You win when all pairs have been found.</p>
       </div>
-
-        <!--  main section of the game board -->
+      <!--  main section of the game board -->
       <div class="disable-select cardGame col-md-9 col-sm-12">
-
-          <!--  restart button  -->
+        <!--  restart button  -->
         <button type="button" class="restart btn btn-info">Restart</button>
-  <!--  presenting and render time  -->
+        <!--  presenting and render time  -->
         <p class="time"> time: <span id="seconds">0</span> seconds </p>
-  <!--  cards divs (16 cards)   -->
-        <div class="row">
-
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
-          <div class="card col-3">
-            <span></span>
-            <div class="cover1">
-
-            </div>
-          </div>
+        <!--  cards divs (16 cards)   -->
+        <div id="board" class="row">
         </div>
       </div>
     </div>
   </div>
-
   <!--  js and jquery links  -->
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
